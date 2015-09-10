@@ -30,7 +30,7 @@ libgbprivate_1_0_la_SOURCES = \
   $(NULL)
 
 INTROSPECTION_GIRS = GbPrivate_1_0_gir
-INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --warn-all
+INTROSPECTION_SCANNER_ARGS = --add-include-path=/usr/local/share/gir-1.0/ --add-include-path=$(srcdir) --warn-all
 INTROSPECTION_COMPILER_ARGS =
 
 if HAVE_INTROSPECTION
@@ -47,6 +47,6 @@ GbPrivate_1_0_gir_SCANNERFLAGS = --warn-all --symbol-prefix=gb --identifier-pref
 GbPrivate_1_0_gir_INCLUDES = \
   GObject-2.0 \
   Gtk-3.0 \
-  WebKit2-3.0
+  WebKit2-4.0
 GbPrivate_1_0_gir_FILES = $(introspection_sources)
 endif
