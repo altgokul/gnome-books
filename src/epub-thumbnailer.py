@@ -21,11 +21,11 @@
 
 import zipfile
 import sys
-import Image
+from PIL import Image
 import os
 import re
 from xml.dom import minidom
-from StringIO import StringIO
+from io import StringIO
 
 
 img_ext_regex = re.compile('^.*\.(jpg|jpeg|png)$', flags=re.IGNORECASE)
@@ -99,6 +99,6 @@ for strategy in extraction_strategies:
         if extract_cover(cover_path):
             exit(0)
     except Exception as ex:
-        print "Error getting cover using %s: " % strategy.__name__, ex
+        print ("Error getting cover using %s: ",strategy.__name__, ex)
 
 exit(1)

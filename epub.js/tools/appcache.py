@@ -47,7 +47,7 @@ def process_extracted_opf(userParams):
                     'dc':'http://purl.org/dc/elements/1.1/',
                     'dcterms':'http://purl.org/dc/terms/'}
 
-    print "Parsing content.opf file at " + userParams['input']
+    print ("Parsing content.opf file at " + userParams['input'])
     # return list
     itemHrefs = []
 
@@ -65,7 +65,7 @@ def process_epub(userParams):
     """
     book = epub.open_epub(userParams['input'])
 
-    print "Parsing epub file at " + userParams['input']
+    print ("Parsing epub file at " + userParams['input'])
 
     itemHrefs = []
     for item in book.opf.manifest.values():

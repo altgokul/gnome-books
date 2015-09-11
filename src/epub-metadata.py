@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import sys
 import zipfile
@@ -33,10 +33,10 @@ def get_epub_info(fname):
     return res
     
 def getTitle():
-    print metadata['title']
+    print (metadata['title'])
     
 def getAuthor():
-	print metadata['creator']
+	print (metadata['creator'])
 '''
 def getLanguage():
     print metadata['language']
