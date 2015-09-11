@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+cd $(dirname $0)
+export LD_LIBRARY_PATH=`pwd`/src/.libs:$LD_LIBRARY_PATH
+export GI_TYPELIB_PATH=`pwd`/src
+gnome-books
